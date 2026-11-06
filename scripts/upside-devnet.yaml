@@ -1,0 +1,62 @@
+dotenv: .env
+upside_61872-1:
+  cmd: upsided
+  start-flags: "--trace"
+  app-config:
+    minimum-gas-prices: 0taup
+    index-events:
+      - ethereum_tx.ethereumTxHash
+    json-rpc:
+      address: "127.0.0.1:{EVMRPC_PORT}"
+      ws-address: "127.0.0.1:{EVMRPC_PORT_WS}"
+      api: "eth,net,web3,debug,upside"
+  validators:
+    - coins: 1000000000000000000stake,10000000000000000000000taup
+      staked: 1000000000000000000stake
+      mnemonic: ${VALIDATOR1_MNEMONIC}
+    - coins: 1000000000000000000stake,10000000000000000000000taup
+      staked: 1000000000000000000stake
+      mnemonic: ${VALIDATOR2_MNEMONIC}
+  accounts:
+    - name: community
+      coins: 10000000000000000000000taup
+      mnemonic: ${COMMUNITY_MNEMONIC}
+    - name: signer1
+      coins: 20000000000000000000000taup
+      mnemonic: ${SIGNER1_MNEMONIC}
+    - name: signer2
+      coins: 30000000000000000000000taup
+      mnemonic: ${SIGNER2_MNEMONIC}
+
+  genesis:
+    consensus:
+      params:
+        block:
+          max_bytes: "1048576"
+          max_gas: "81500000"
+    app_state:
+      evm:
+        params:
+          evm_denom: taup
+      upside:
+        params:
+          upside_admin: ${UPSIDE_ADMIN}
+          enable_auto_deployment: true
+          ibc_upside_denom: ${IBC_UP_DENOM}
+      gov:
+        params:
+          expedited_voting_period: "1s"
+          voting_period: "10s"
+          max_deposit_period: "10s"
+          min_deposit:
+            - denom: "taup"
+              amount: "1"
+      transfer:
+        params:
+          receive_enabled: true
+          send_enabled: true
+      feemarket:
+        params:
+          no_base_fee: false
+          base_fee: "100000000000"
+          min_gas_multiplier: "0"

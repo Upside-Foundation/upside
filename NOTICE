@@ -1,0 +1,36 @@
+Upside Network
+Copyright 2026 Upside Foundation
+
+This product is derived from Cronos (https://github.com/crypto-org-chain/cronos):
+Copyright 2021-present Cronos Labs
+Licensed under the Apache License, Version 2.0.
+
+The Upside Network code is licensed under the Apache License, Version 2.0;
+see the LICENSE file.
+
+Components under other licenses
+-------------------------------
+
+The upsided binary links the following Go modules, which are licensed under
+the GNU Lesser General Public License, version 3 (LGPL-3.0). Their source
+code is available at the listed locations; the exact versions are pinned in
+go.mod and go.sum.
+
+  - Ethermint, fork maintained by Crypto.org:
+    https://github.com/crypto-org-chain/ethermint
+  - go-ethereum library packages, fork maintained by Crypto.org:
+    https://github.com/crypto-org-chain/go-ethereum
+
+The contracts/ directory includes Solidity libraries from DappHub
+(ds-token, ds-auth, ds-test), Copyright (C) 2015, 2016, 2017 DappHub, LLC,
+licensed under the GNU General Public License, version 3 or later (GPL-3.0).
+Each file keeps its own license header.
+
+The contracts in contracts/src/ModuleCRC20.sol and contracts/src/ModuleCRC21.sol
+extend ds-token. Their compiled bytecode is embedded in the upsided binary
+(x/upside/types/contracts/ModuleCRC20.json and ModuleCRC21.json), so the binary
+contains code built from GPL-3.0 sources. The full source of these contracts
+and of ds-token is in this repository.
+
+Other dependencies are listed in go.mod and keep their own licenses,
+including the Cosmos SDK and CometBFT (Apache License 2.0) and ibc-go (MIT).
