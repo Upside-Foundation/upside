@@ -5,6 +5,9 @@ make install
 CHAINID="upside_61872-1"
 MONIKER="localtestnet"
 
+# Test-only mnemonics for local networks and integration tests. They are public.
+# Never send funds to these accounts and never use them on mainnet or testnet.
+
 # localKey address 0x7cb61d4117ae31a12e393a1cfa3bac666481d02e
 VAL_KEY="localkey"
 VAL_MNEMONIC="gesture inject test cycle original hollow east ridge hen combine junk child bacon zero hope comfort vacuum milk pitch cage oppose unhappy lunar seat"
@@ -31,7 +34,7 @@ upsided init $MONIKER --chain-id $CHAINID --default-denom aup
 #cat $HOME/.upside/config/genesis.json | jq '.consensus_params["block"]["max_gas"]="10000000"' > $HOME/.upside/config/tmp_genesis.json && mv $HOME/.upside/config/tmp_genesis.json $HOME/.upside/config/genesis.json
 # cat $HOME/.upside/config/genesis.json | jq '.app_state["upside"]["params"]["ibc_upside_denom"]="aup"' > $HOME/.upside/config/tmp_genesis.json && mv $HOME/.upside/config/tmp_genesis.json $HOME/.upside/config/genesis.json
 # cat $HOME/.upside/config/genesis.json | jq '.app_state["gravity"]["params"]["ethereum_blacklist"]=["0x000000000000000000000000000000000000dEaD"]' > $HOME/.upside/config/tmp_genesis.json && mv $HOME/.upside/config/tmp_genesis.json $HOME/.upside/config/genesis.json
-cat $HOME/.upside/config/genesis.json | jq '.consensus["params"]["block"]["max_gas"]="10000000"' > $HOME/.upside/config/tmp_genesis.json && mv $HOME/.upside/config/tmp_genesis.json $HOME/.upside/config/genesis.json
+cat $HOME/.upside/config/genesis.json | jq '.consensus["params"]["block"]["max_gas"]="10000000" | .app_state.evm.params.evm_denom = "aup"' > $HOME/.upside/config/tmp_genesis.json && mv $HOME/.upside/config/tmp_genesis.json $HOME/.upside/config/genesis.json
 
 # Allocate genesis accounts (cosmos formatted addresses)
 upsided genesis add-genesis-account "$(upsided keys show $VAL_KEY -a --keyring-backend test)" 10000000000000000000000aup --keyring-backend test

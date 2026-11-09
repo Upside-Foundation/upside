@@ -1,7 +1,7 @@
 package app
 
 import (
-	icaauthtypes "github.com/0xUp5ide/upside-foundation/app/legacy/icaauth/types"
+	icaauthtypes "github.com/Upside-Foundation/upside/app/legacy/icaauth/types"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"

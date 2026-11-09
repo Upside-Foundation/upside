@@ -3,8 +3,8 @@ package keeper
 import (
 	"strings"
 
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	transferTypes "github.com/cosmos/ibc-go/v10/modules/apps/transfer/types"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
 	evmTypes "github.com/evmos/ethermint/x/evm/types"
 
 	"cosmossdk.io/errors"

@@ -1,6 +1,6 @@
 package config
 
-import "github.com/0xUp5ide/upside-foundation/memiavl"
+import "github.com/Upside-Foundation/upside/memiavl"
 
 const DefaultCacheSize = 1000
 

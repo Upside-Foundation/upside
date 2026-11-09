@@ -3,9 +3,9 @@ package v2_test
 import (
 	"testing"
 
-	"github.com/0xUp5ide/upside-foundation/x/upside/exported"
-	v2 "github.com/0xUp5ide/upside-foundation/x/upside/migrations/v2"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	"github.com/Upside-Foundation/upside/x/upside/exported"
+	v2 "github.com/Upside-Foundation/upside/x/upside/migrations/v2"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	"github.com/stretchr/testify/require"
 
 	simappparams "cosmossdk.io/simapp/params"

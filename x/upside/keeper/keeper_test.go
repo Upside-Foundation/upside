@@ -1,19 +1,19 @@
 package keeper_test
 
 import (
-	"strings"
 	"math/big"
+	"strings"
 	"testing"
 	"time"
 
+	"github.com/Upside-Foundation/upside/app"
+	upsidemodulekeeper "github.com/Upside-Foundation/upside/x/upside/keeper"
+	keepertest "github.com/Upside-Foundation/upside/x/upside/keeper/mock"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	"github.com/cometbft/cometbft/crypto/tmhash"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 	tmversion "github.com/cometbft/cometbft/proto/tendermint/version"
 	"github.com/cometbft/cometbft/version"
-	"github.com/0xUp5ide/upside-foundation/app"
-	upsidemodulekeeper "github.com/0xUp5ide/upside-foundation/x/upside/keeper"
-	keepertest "github.com/0xUp5ide/upside-foundation/x/upside/keeper/mock"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
 	"github.com/ethereum/go-ethereum/common"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/evmos/ethermint/crypto/ethsecp256k1"

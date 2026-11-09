@@ -8,9 +8,9 @@ import (
 	"path/filepath"
 	"strconv"
 
+	"github.com/Upside-Foundation/upside/versiondb"
+	"github.com/Upside-Foundation/upside/versiondb/tsrocksdb"
 	protoio "github.com/cosmos/gogoproto/io"
-	"github.com/0xUp5ide/upside-foundation/versiondb"
-	"github.com/0xUp5ide/upside-foundation/versiondb/tsrocksdb"
 	"github.com/spf13/cobra"
 
 	cosmossdkio "cosmossdk.io/errors"

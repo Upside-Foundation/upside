@@ -11,8 +11,13 @@ other Cosmos chains over IBC.
 The `x/upside` module connects IBC and the EVM. It keeps a mapping between
 native Cosmos denoms and EVM token contracts, converts tokens between the two
 forms, and runs hooks when EVM contracts emit certain events. It also holds the
-parameter that controls the native token's supply curve (see
-[Supply Curve](08_supply.md)).
+two parameters that control the native token's supply curve,
+`mint_half_life_seconds` and `mint_paused` (see [Supply Curve](08_supply.md)).
+
+On mainnet, governance proposal 6 turned off IBC transfers: the `transfer`
+module's `send_enabled` and `receive_enabled` parameters are `false`, and
+mainnet has no IBC channels. While that holds, `MsgTransferTokens` fails, and
+no IBC vouchers arrive for `MsgConvertVouchers` to convert.
 
 ## Native Token
 
@@ -33,14 +38,18 @@ That voucher is assumed to have 8 decimals:
   are truncated to 8 decimals; the remainder stays on Upside.
 
 This path only runs if an IBC channel delivers a voucher with exactly that
-denom.
+denom. The default `ibc_upside_denom` is inherited from Cronos, where it
+is the denom of the CRO voucher. No Upside channel delivers it.
 
 ## Native Denoms Handled by the Module
 
 - `aup`: the native token.
 - IBC vouchers, `ibc/<hash>`: tokens received over IBC channels.
 - Source tokens, `up0x<contract address>`: native denoms for tokens that
-  originate from CRC21 contracts on Upside.
+  originate from CRC21 contracts on Upside. A CRC21 contract follows the
+  interface in [`ModuleCRC21.sol`](../../../contracts/src/ModuleCRC21.sol),
+  which adds events for sending tokens over IBC and an `is_source` flag that
+  marks a token originating on Upside.
 - `gravity0x<contract address>`: a denom format inherited from Cronos's
   gravity bridge. Token mapping still accepts it, but this chain has no
   gravity bridge module, so no tokens arrive this way.
@@ -77,10 +86,11 @@ The `upside_admin` parameter names an admin account, which has every
 permission. The admin can grant permissions to other accounts with
 `MsgUpdatePermissions`. Permissions are bit flags:
 
-| Bit | Permission              | Allows                                       |
-| --- | ----------------------- | -------------------------------------------- |
-| 1   | `CanChangeTokenMapping` | `MsgUpdateTokenMapping`                      |
-| 2   | `CanTurnBridge`         | `MsgTurnBridge`, which currently does nothing |
+| Value | Permission              | Allows                                        |
+| ----- | ----------------------- | --------------------------------------------- |
+| 1     | `CanChangeTokenMapping` | `MsgUpdateTokenMapping`                       |
+| 2     | `CanTurnBridge`         | `MsgTurnBridge`, which currently does nothing |
+| 3     | `All`                   | Both of the above                             |
 
 ## Block List
 

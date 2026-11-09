@@ -8,7 +8,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	minttypes "github.com/cosmos/cosmos-sdk/x/mint/types"
 
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 )
 
 // MintInflationFn returns the inflation function x/mint calls at the start of

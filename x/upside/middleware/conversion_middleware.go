@@ -1,11 +1,11 @@
 package middleware
 
 import (
+	upsidekeeper "github.com/Upside-Foundation/upside/x/upside/keeper"
 	transferTypes "github.com/cosmos/ibc-go/v10/modules/apps/transfer/types"
 	channeltypes "github.com/cosmos/ibc-go/v10/modules/core/04-channel/types"
 	porttypes "github.com/cosmos/ibc-go/v10/modules/core/05-port/types"
 	"github.com/cosmos/ibc-go/v10/modules/core/exported"
-	upsidekeeper "github.com/0xUp5ide/upside-foundation/x/upside/keeper"
 
 	"cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"

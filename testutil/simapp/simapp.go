@@ -3,11 +3,11 @@ package simapp
 import (
 	"time"
 
+	"github.com/Upside-Foundation/upside/app"
 	abci "github.com/cometbft/cometbft/abci/types"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 	tmtypes "github.com/cometbft/cometbft/types"
 	tmdb "github.com/cosmos/cosmos-db"
-	"github.com/0xUp5ide/upside-foundation/app"
 
 	"cosmossdk.io/log"
 

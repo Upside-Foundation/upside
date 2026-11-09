@@ -1,7 +1,7 @@
 package keeper_test
 
 import (
-	. "github.com/0xUp5ide/upside-foundation/x/upside/keeper"
+	. "github.com/Upside-Foundation/upside/x/upside/keeper"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/evmos/ethermint/crypto/ethsecp256k1"
 

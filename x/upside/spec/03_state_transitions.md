@@ -27,4 +27,8 @@ When a token mapping is updated, the old contract still exists.
 
 ### Delete
 
-There's no way to delete a token mapping currently.
+A `TokenMappingChangeProposal` with an empty `contract` deletes the external
+mapping for its denom, if the denom is not a source token (`up0x...`).
+`MsgUpdateTokenMapping` can't delete a mapping, because its basic validation
+rejects an empty contract address. A mapping to a contract that the module
+deployed automatically can't be deleted.

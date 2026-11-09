@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/0xUp5ide/upside-foundation/x/upside/client/cli"
+	"github.com/Upside-Foundation/upside/x/upside/client/cli"
 
 	govclient "github.com/cosmos/cosmos-sdk/x/gov/client"
 )

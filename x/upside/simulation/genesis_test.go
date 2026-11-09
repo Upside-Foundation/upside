@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/0xUp5ide/upside-foundation/x/upside/simulation"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	"github.com/Upside-Foundation/upside/x/upside/simulation"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	"github.com/stretchr/testify/require"
 
 	"cosmossdk.io/math"

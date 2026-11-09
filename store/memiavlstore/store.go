@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/Upside-Foundation/upside/memiavl"
 	cmtprotocrypto "github.com/cometbft/cometbft/proto/tendermint/crypto"
 	ics23 "github.com/cosmos/ics23/go"
-	"github.com/0xUp5ide/upside-foundation/memiavl"
 
 	"cosmossdk.io/errors"
 	"cosmossdk.io/log"

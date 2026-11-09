@@ -3,7 +3,7 @@ package client
 import (
 	"fmt"
 
-	"github.com/0xUp5ide/upside-foundation/versiondb/tsrocksdb"
+	"github.com/Upside-Foundation/upside/versiondb/tsrocksdb"
 	"github.com/linxGnu/grocksdb"
 	"github.com/spf13/cobra"
 )

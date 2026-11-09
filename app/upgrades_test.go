@@ -13,8 +13,8 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	minttypes "github.com/cosmos/cosmos-sdk/x/mint/types"
 
-	upsidekeeper "github.com/0xUp5ide/upside-foundation/x/upside/keeper"
-	upsidetypes "github.com/0xUp5ide/upside-foundation/x/upside/types"
+	upsidekeeper "github.com/Upside-Foundation/upside/x/upside/keeper"
+	upsidetypes "github.com/Upside-Foundation/upside/x/upside/types"
 )
 
 // setupSupplyCapTest returns an app whose state looks like mainnet before

@@ -1,8 +1,8 @@
 package upside_test
 
 import (
-	"github.com/0xUp5ide/upside-foundation/x/upside"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	"github.com/Upside-Foundation/upside/x/upside"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 )
 
 func (suite *UpsideTestSuite) TestInitGenesis() {

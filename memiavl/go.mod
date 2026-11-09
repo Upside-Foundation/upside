@@ -1,4 +1,4 @@
-module github.com/0xUp5ide/upside-foundation/memiavl
+module github.com/Upside-Foundation/upside/memiavl
 
 go 1.23.0
 

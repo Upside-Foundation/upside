@@ -7,8 +7,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/0xUp5ide/upside-foundation/versiondb"
-	"github.com/0xUp5ide/upside-foundation/versiondb/tsrocksdb"
+	"github.com/Upside-Foundation/upside/versiondb"
+	"github.com/Upside-Foundation/upside/versiondb/tsrocksdb"
 
 	storetypes "cosmossdk.io/store/types"
 )

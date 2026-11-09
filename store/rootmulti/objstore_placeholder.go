@@ -7,7 +7,7 @@ import (
 	"fmt"
 
 	"cosmossdk.io/store/types"
-	"github.com/0xUp5ide/upside-foundation/memiavl"
+	"github.com/Upside-Foundation/upside/memiavl"
 )
 
 func (rs *Store) GetObjKVStore(key types.StoreKey) types.ObjKVStore {

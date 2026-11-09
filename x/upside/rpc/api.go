@@ -6,8 +6,8 @@ import (
 	"math/big"
 	"strings"
 
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	coretypes "github.com/cometbft/cometbft/rpc/core/types"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"

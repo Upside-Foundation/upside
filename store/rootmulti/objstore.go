@@ -6,7 +6,7 @@ package rootmulti
 import (
 	"fmt"
 
-	"github.com/0xUp5ide/upside-foundation/memiavl"
+	"github.com/Upside-Foundation/upside/memiavl"
 
 	"cosmossdk.io/store/transient"
 	"cosmossdk.io/store/types"

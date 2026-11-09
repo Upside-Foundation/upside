@@ -3,7 +3,7 @@ package e2ee;
 
 import "cosmos/msg/v1/msg.proto";
 
-option go_package = "github.com/0xUp5ide/upside-foundation/x/e2ee/types";
+option go_package = "github.com/Upside-Foundation/upside/x/e2ee/types";
 
 // Msg defines the e2ee Msg service
 service Msg {

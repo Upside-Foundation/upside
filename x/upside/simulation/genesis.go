@@ -6,14 +6,14 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 )
 
 const (
-	ibcUpsideDenomKey          = "ibc_upside_denom"
+	ibcUpsideDenomKey       = "ibc_upside_denom"
 	ibcTimeoutKey           = "ibc_timeout"
 	upsideAdminKey          = "upside_admin"
 	enableAutoDeploymentKey = "enable_auto_deployment"
@@ -49,7 +49,7 @@ func GenMaxCallbackGas(r *rand.Rand) uint64 {
 func RandomizedGenState(simState *module.SimulationState) {
 	// upside params
 	var (
-		ibcUpsideDenom          string
+		ibcUpsideDenom       string
 		ibcTimeout           uint64
 		upsideAdmin          string
 		enableAutoDeployment bool

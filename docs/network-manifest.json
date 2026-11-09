@@ -1,0 +1,100 @@
+{
+  "manifest_version": 1,
+  "network_family": "upside-l1",
+  "updated_at": "2026-11-09",
+  "networks": {
+    "mainnet": {
+      "status": "live",
+      "cosmos_chain_id": "upside_61873-1",
+      "evm_chain_id": 61873,
+      "address_prefix": "up",
+      "base_denomination": "aup",
+      "decimals": 18,
+      "native_symbol": "UP",
+      "rpc": "https://rpc.mainnet.upside.net/tendermint/",
+      "evm_rpc": "https://rpc.mainnet.upside.net",
+      "rest": null,
+      "grpc": null,
+      "genesis_url": null,
+      "genesis_sha256": "e34bf9628164ba43375186b1118c8aaef82d2be08d4685d9e8cca68ad356aa50",
+      "release_url": "https://github.com/Upside-Foundation/upside/releases/download/v2.0.0/upsided-v2.0.0-linux-amd64",
+      "release_sha256": "1279d570c0a031bcd0b7c7ce4aa379b3de9f6bae984feffe894bc357de6ca40b",
+      "seeds": [
+        "7c1e6a83b2e5308428c1164091c6a5765d79a184@3.135.80.240:26656"
+      ],
+      "persistent_peers": [
+        "1bfb165a3fa4b3a8ccbd55fabd3ecf8117e88bd6@3.19.153.80:26656",
+        "9d8723c3fec856b80d5357f480c984b923b2c729@18.225.42.62:26656"
+      ],
+      "explorer": "https://explorer.mainnet.upside.net",
+      "current_release": "v2.0.0",
+      "v2_upgrade_height": 3898900,
+      "genesis_file": "../assets/mainnet/genesis.json",
+      "evm_ws": "wss://rpc.mainnet.upside.net/ws",
+      "notes": "Use the seed for discovery and the two public sentries for persistent peering. A new current-release node starts from state sync from the public sentries or from the signed daily archive listed at https://snapshots.mainnet.upside.net/manifest.json. Replaying from genesis needs the historical binary sequence, and the pre-v2 binary is not published.",
+      "release_source_tag": "v2.0.0",
+      "release_artifact": "upsided-v2.0.0-linux-amd64",
+      "release_notes": "The checksum identifies the linux/amd64 artifact recorded in governance proposal 4. For source builds, see getting-started/install.md."
+    },
+    "testnet": {
+      "status": "live",
+      "cosmos_chain_id": "upside_61872-1",
+      "evm_chain_id": 61872,
+      "address_prefix": "up",
+      "base_denomination": "aup",
+      "decimals": 18,
+      "native_symbol": "UP",
+      "rpc": "https://rpc.testnet.upside.net/tendermint/",
+      "evm_rpc": "https://rpc.testnet.upside.net",
+      "rest": null,
+      "grpc": null,
+      "genesis_url": null,
+      "genesis_sha256": "e2d9ed9255de41e6fdc2de34bdd2ac54d0d3f39092530363682524798ceaedc3",
+      "release_url": null,
+      "release_sha256": null,
+      "seeds": [],
+      "persistent_peers": [
+        "9c43ac9d3f4edf87caee48d102d2099d9369f672@162.19.232.154:26656"
+      ],
+      "explorer": "https://explorer.testnet.upside.net",
+      "faucet": "https://faucet.testnet.upside.net",
+      "genesis_file": "../assets/testnet/genesis.json",
+      "evm_ws": "wss://rpc.testnet.upside.net/ws",
+      "notes": "The testnet has not applied the v2.0.0 upgrade, and the binary it runs is not published. It has no published snapshots."
+    },
+    "localnet": {
+      "status": "local",
+      "cosmos_chain_id": "upside_61874-1",
+      "evm_chain_id": 61874,
+      "address_prefix": "up",
+      "base_denomination": "aup",
+      "decimals": 18,
+      "native_symbol": "UP",
+      "rpc": "http://127.0.0.1:27657",
+      "evm_rpc": "http://127.0.0.1:18545",
+      "rest": null,
+      "grpc": null,
+      "genesis_url": null,
+      "genesis_sha256": null,
+      "release_url": null,
+      "release_sha256": null,
+      "seeds": [],
+      "persistent_peers": [],
+      "notes": "The localnet guide creates this private chain and assigns disposable accounts."
+    }
+  },
+  "token": {
+    "symbol": "UP",
+    "base_denomination": "aup",
+    "decimals": 18,
+    "maximum_supply": "2100000000",
+    "maximum_supply_unit": "UP",
+    "emission_schedule": "half-life curve toward cap",
+    "reward_allocation_at_launch": {
+      "governance_treasury_percent": 93,
+      "staking_rewards_percent": 7
+    },
+    "notes": "The native x/mint cap and half-life curve were activated at block 3898900. See technical/supply-and-minting.md for other minting paths and scope.",
+    "mint_half_life_seconds": 63115200
+  }
+}

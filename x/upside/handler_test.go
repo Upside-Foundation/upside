@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/Upside-Foundation/upside/app"
+	"github.com/Upside-Foundation/upside/x/upside/keeper"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/0xUp5ide/upside-foundation/app"
-	"github.com/0xUp5ide/upside-foundation/x/upside/keeper"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
 	"github.com/evmos/ethermint/crypto/ethsecp256k1"
 	"github.com/stretchr/testify/suite"
 

@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	v2 "github.com/0xUp5ide/upside-foundation/x/upside/migrations/v2"
+	v2 "github.com/Upside-Foundation/upside/x/upside/migrations/v2"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"

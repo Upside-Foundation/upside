@@ -5,8 +5,8 @@ import (
 	"os"
 
 	"filippo.io/age"
-	"github.com/0xUp5ide/upside-foundation/x/e2ee/keyring"
-	"github.com/0xUp5ide/upside-foundation/x/e2ee/types"
+	"github.com/Upside-Foundation/upside/x/e2ee/keyring"
+	"github.com/Upside-Foundation/upside/x/e2ee/types"
 	"github.com/spf13/cobra"
 
 	"github.com/cosmos/cosmos-sdk/client"

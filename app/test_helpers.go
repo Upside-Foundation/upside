@@ -11,11 +11,11 @@ import (
 	"testing"
 	"time"
 
+	upsidetypes "github.com/Upside-Foundation/upside/x/upside/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 	tmtypes "github.com/cometbft/cometbft/types"
 	dbm "github.com/cosmos/cosmos-db"
-	upsidetypes "github.com/0xUp5ide/upside-foundation/x/upside/types"
 	app "github.com/evmos/ethermint/evmd"
 	"github.com/stretchr/testify/require"
 

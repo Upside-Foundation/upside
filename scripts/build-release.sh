@@ -15,6 +15,13 @@
 #     never built. The tree must be clean.
 #   - -trimpath and -buildvcs=false, so the build path and .git state are not
 #     embedded. The commit is embedded through ldflags instead.
+#
+# UPSIDE_BUILD_COMMIT overrides the commit hash embedded in the binary. The
+# public tags were recreated without the original history, so the commit a
+# published binary embeds can differ from the tag's own commit. To reproduce
+# such a binary, check out the tag and set UPSIDE_BUILD_COMMIT to the commit
+# the binary reports. The override changes only the embedded string, not the
+# source that is built.
 set -euo pipefail
 
 VERSION="${1:?usage: $0 <version, e.g. v2.0.0>}"
@@ -29,7 +36,14 @@ if [[ -n "$(git status --porcelain --untracked-files=no)" ]]; then
     echo "tracked files have uncommitted changes; commit or stash them first" >&2
     exit 1
 fi
-COMMIT="$(git rev-parse HEAD)"
+COMMIT="${UPSIDE_BUILD_COMMIT:-$(git rev-parse HEAD)}"
+if [[ -n "${UPSIDE_BUILD_COMMIT:-}" ]]; then
+    if [[ ! "$UPSIDE_BUILD_COMMIT" =~ ^[0-9a-f]{40}$ ]]; then
+        echo "UPSIDE_BUILD_COMMIT must be 40 lowercase hexadecimal characters" >&2
+        exit 1
+    fi
+    echo "embedded commit overridden: UPSIDE_BUILD_COMMIT=$UPSIDE_BUILD_COMMIT (HEAD is $(git rev-parse HEAD))" >&2
+fi
 
 OUT="build/release"
 mkdir -p "$OUT"

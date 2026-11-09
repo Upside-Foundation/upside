@@ -1,7 +1,7 @@
 package app
 
 import (
-	cmdcfg "github.com/0xUp5ide/upside-foundation/cmd/upsided/config"
+	cmdcfg "github.com/Upside-Foundation/upside/cmd/upsided/config"
 	ethcfg "github.com/evmos/ethermint/cmd/config"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"

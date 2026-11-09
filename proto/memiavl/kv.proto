@@ -4,7 +4,7 @@ package memiavl;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/0xUp5ide/upside-foundation/memiavl";
+option go_package = "github.com/Upside-Foundation/upside/memiavl";
 
 // Pairs defines a repeated slice of Pair objects.
 message Pairs {

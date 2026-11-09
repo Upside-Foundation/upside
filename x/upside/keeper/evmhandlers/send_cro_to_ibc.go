@@ -3,8 +3,8 @@ package evmhandler
 import (
 	"math/big"
 
-	upsidekeeper "github.com/0xUp5ide/upside-foundation/x/upside/keeper"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	upsidekeeper "github.com/Upside-Foundation/upside/x/upside/keeper"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 

@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/0xUp5ide/upside-foundation/versiondb/tsrocksdb"
+	"github.com/Upside-Foundation/upside/versiondb/tsrocksdb"
 	"github.com/cosmos/iavl"
 	"github.com/spf13/cobra"
 )

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"github.com/0xUp5ide/upside-foundation/versiondb"
+	"github.com/Upside-Foundation/upside/versiondb"
 	"github.com/linxGnu/grocksdb"
 )
 

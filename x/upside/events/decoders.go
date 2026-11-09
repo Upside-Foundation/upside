@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/Upside-Foundation/upside/x/upside/events/bindings/cosmos/lib"
+	generated "github.com/Upside-Foundation/upside/x/upside/events/bindings/cosmos/precompile/relayer"
 	transfertypes "github.com/cosmos/ibc-go/v10/modules/apps/transfer/types"
-	"github.com/0xUp5ide/upside-foundation/x/upside/events/bindings/cosmos/lib"
-	generated "github.com/0xUp5ide/upside-foundation/x/upside/events/bindings/cosmos/precompile/relayer"
 	"github.com/ethereum/go-ethereum/common"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"

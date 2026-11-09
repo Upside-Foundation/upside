@@ -6,8 +6,8 @@ import (
 	"io"
 	"math"
 
+	"github.com/Upside-Foundation/upside/memiavl"
 	protoio "github.com/cosmos/gogoproto/io"
-	"github.com/0xUp5ide/upside-foundation/memiavl"
 
 	cosmoserrors "cosmossdk.io/errors"
 	"cosmossdk.io/store/snapshots/types"

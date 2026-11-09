@@ -15,8 +15,8 @@ The chain uses the standard Cosmos SDK `x/mint` module. `x/mint` asks an
 inflation function for an annual rate at the start of every block, mints
 rate × supply / `blocks_per_year`, and sends it to the fee collector. The app
 passes `x/mint` the function in [`x/upside/keeper/mint.go`](../keeper/mint.go)
-instead of the SDK default. `x/mint`'s `inflation_min`, `inflation_max`, and
-`goal_bonded` parameters are therefore not used.
+instead of the SDK default. `x/mint`'s `inflation_min`, `inflation_max`,
+`inflation_rate_change`, and `goal_bonded` parameters are therefore not used.
 
 The function returns
 
@@ -63,10 +63,11 @@ nothing, and supply stays where it is. The `x/mint` minter's `inflation` and
 `annual_provisions` read zero from that next block until minting resumes.
 
 A second proposal with `MsgSetMintPaused{paused: false}` resumes minting. The rate
-depends only on the current supply, so minting resumes at the rate it had when
-it was paused. The tokens that the paused blocks would have minted are not
-minted later; the whole supply schedule moves later by the length of the
-pause.
+depends only on the current supply, so if supply, `mint_half_life_seconds`, and
+`blocks_per_year` are unchanged during the pause, minting resumes at the rate
+it had when it was paused. The tokens that the paused blocks would have minted
+are not minted later; under the same condition, the whole supply schedule
+moves later by the length of the pause.
 
 `MsgSetMintPaused` is the only message that changes `mint_paused`.
 `MsgUpdateParams` replaces every parameter, so it fails when its `mint_paused`
@@ -82,8 +83,8 @@ minting, because the inflation function does not read them.
 With the governance parameters in mainnet genesis, a pause takes effect when
 the vote ends: 48 hours after the proposal reaches its minimum deposit for a
 normal proposal, 24 hours for an expedited one. An expedited proposal that
-fails the expedited threshold becomes a normal proposal and votes for another
-48 hours.
+fails the expedited threshold becomes a normal proposal, and voting continues
+until 48 hours after voting started (24 hours more).
 
 ## Distribution of minted tokens
 

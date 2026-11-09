@@ -53,8 +53,18 @@ with the `CanChangeTokenMapping` permission can send it.
 This message fails if:
 
 - The sender is not authorized.
-- The contract address or denom is malformed.
+- The contract address or denom is malformed. An empty contract address is
+  rejected, so this message can't delete a mapping (see
+  [State Transitions](03_state_transitions.md#delete)).
 - The contract is already mapped to another denom.
+
+Fields:
+
+- `sender`: the signer, a bech32 address on Upside.
+- `denom`: the denom to map.
+- `contract`: the hex address of the contract.
+- `symbol`: the token symbol. Used only for source tokens (`up0x...`).
+- `decimal`: the number of decimals. Used only for source tokens.
 
 ## MsgTurnBridge
 
@@ -66,6 +76,16 @@ chain has no gravity bridge, and the message handler does nothing.
 Replaces all module parameters. Only the governance module account can send
 it, so it runs as part of a passed governance proposal. Every parameter must
 be supplied; see [Parameters](07_params.md) for validation.
+
+## MsgSetMintPaused
+
+Sets `mint_paused` to pause or resume `x/mint`. Only the governance module
+account can send it, through a governance proposal. Fields are `authority`
+(the governance account) and `paused` (the requested boolean value).
+
+This is the only message that changes `mint_paused`; `MsgUpdateParams` must
+repeat the stored value. Resuming minting does not mint the amounts skipped
+while paused. See [Supply](08_supply.md) and [Parameters](07_params.md).
 
 ## MsgUpdatePermissions
 

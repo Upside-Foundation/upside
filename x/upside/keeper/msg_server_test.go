@@ -1,8 +1,8 @@
 package keeper_test
 
 import (
-	upsidemodulekeeper "github.com/0xUp5ide/upside-foundation/x/upside/keeper"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	upsidemodulekeeper "github.com/Upside-Foundation/upside/x/upside/keeper"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
@@ -21,7 +21,7 @@ func (suite *KeeperTestSuite) TestUpdateParams() {
 			req: &types.MsgUpdateParams{
 				Authority: authtypes.NewModuleAddress(govtypes.ModuleName).String(),
 				Params: types.Params{
-					IbcUpsideDenom:          types.IbcUpsideDenomDefaultValue,
+					IbcUpsideDenom:       types.IbcUpsideDenomDefaultValue,
 					IbcTimeout:           10,
 					UpsideAdmin:          sdk.AccAddress(suite.address.Bytes()).String(),
 					EnableAutoDeployment: true,
@@ -73,7 +73,7 @@ func (suite *KeeperTestSuite) TestUpdateParams() {
 			req: &types.MsgUpdateParams{
 				Authority: suite.app.UpsideKeeper.GetAuthority(),
 				Params: types.Params{
-					IbcUpsideDenom:          "foo",
+					IbcUpsideDenom:       "foo",
 					IbcTimeout:           10,
 					UpsideAdmin:          sdk.AccAddress(suite.address.Bytes()).String(),
 					EnableAutoDeployment: true,
@@ -87,7 +87,7 @@ func (suite *KeeperTestSuite) TestUpdateParams() {
 			req: &types.MsgUpdateParams{
 				Authority: suite.app.UpsideKeeper.GetAuthority(),
 				Params: types.Params{
-					IbcUpsideDenom:          types.IbcUpsideDenomDefaultValue,
+					IbcUpsideDenom:       types.IbcUpsideDenomDefaultValue,
 					IbcTimeout:           10,
 					UpsideAdmin:          "foo",
 					EnableAutoDeployment: true,

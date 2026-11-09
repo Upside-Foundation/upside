@@ -20,7 +20,8 @@ changes them with `MsgUpdateParams`, which must include every parameter.
 
 - `ibc_upside_denom`: the IBC voucher denom that is converted to `aup` on
   arrival (see [Concepts](01_concepts.md#ibc-voucher-conversion)). The default
-  is inherited from Cronos. Changing it does not move tokens already
+  is inherited from Cronos: it is the denom of the CRO voucher on Cronos, with
+  8 decimals. No Upside channel delivers it. Changing it does not move tokens already
   converted; that would need an explicit migration.
 
 - `ibc_timeout`: the timeout used when the module sends tokens over IBC.

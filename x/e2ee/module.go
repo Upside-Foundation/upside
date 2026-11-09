@@ -5,10 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/Upside-Foundation/upside/x/e2ee/client/cli"
+	"github.com/Upside-Foundation/upside/x/e2ee/keeper"
+	"github.com/Upside-Foundation/upside/x/e2ee/types"
 	abci "github.com/cometbft/cometbft/abci/types"
-	"github.com/0xUp5ide/upside-foundation/x/e2ee/client/cli"
-	"github.com/0xUp5ide/upside-foundation/x/e2ee/keeper"
-	"github.com/0xUp5ide/upside-foundation/x/e2ee/types"
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/spf13/cobra"

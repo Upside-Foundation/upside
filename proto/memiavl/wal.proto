@@ -1,7 +1,7 @@
 syntax = "proto3";
 package memiavl;
 
-option go_package = "github.com/0xUp5ide/upside-foundation/memiavl";
+option go_package = "github.com/Upside-Foundation/upside/memiavl";
 
 import "gogoproto/gogo.proto";
 import "memiavl/changeset.proto";

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"math/big"
 
-	upsidemodulekeeper "github.com/0xUp5ide/upside-foundation/x/upside/keeper"
-	keepertest "github.com/0xUp5ide/upside-foundation/x/upside/keeper/mock"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	upsidemodulekeeper "github.com/Upside-Foundation/upside/x/upside/keeper"
+	keepertest "github.com/Upside-Foundation/upside/x/upside/keeper/mock"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/evmos/ethermint/crypto/ethsecp256k1"
 

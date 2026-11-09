@@ -3,9 +3,9 @@ package keeper_test
 import (
 	"errors"
 
-	upsidemodulekeeper "github.com/0xUp5ide/upside-foundation/x/upside/keeper"
-	keepertest "github.com/0xUp5ide/upside-foundation/x/upside/keeper/mock"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	upsidemodulekeeper "github.com/Upside-Foundation/upside/x/upside/keeper"
+	keepertest "github.com/Upside-Foundation/upside/x/upside/keeper/mock"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"

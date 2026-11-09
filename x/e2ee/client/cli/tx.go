@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/0xUp5ide/upside-foundation/x/e2ee/types"
+	"github.com/Upside-Foundation/upside/x/e2ee/types"
 	"github.com/spf13/cobra"
 
 	"github.com/cosmos/cosmos-sdk/client"

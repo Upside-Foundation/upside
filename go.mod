@@ -1,4 +1,4 @@
-module github.com/0xUp5ide/upside-foundation
+module github.com/Upside-Foundation/upside
 
 go 1.23.12
 
@@ -18,8 +18,8 @@ require (
 	cosmossdk.io/x/feegrant v0.1.1
 	cosmossdk.io/x/upgrade v0.2.0
 	filippo.io/age v1.2.1
-	github.com/0xUp5ide/upside-foundation/store v0.0.4
-	github.com/0xUp5ide/upside-foundation/versiondb v0.0.0-00010101000000-000000000000
+	github.com/Upside-Foundation/upside/store v0.0.4
+	github.com/Upside-Foundation/upside/versiondb v0.0.0-00010101000000-000000000000
 	github.com/99designs/keyring v1.2.2
 	github.com/cometbft/cometbft v0.38.17
 	github.com/cosmos/cosmos-db v1.1.3
@@ -62,7 +62,7 @@ require (
 	cosmossdk.io/schema v1.1.0 // indirect
 	cosmossdk.io/x/tx v0.14.0 // indirect
 	filippo.io/edwards25519 v1.1.0 // indirect
-	github.com/0xUp5ide/upside-foundation/memiavl v0.0.4 // indirect
+	github.com/Upside-Foundation/upside/memiavl v0.0.4 // indirect
 	github.com/99designs/go-keychain v0.0.0-20191008050251-8e49817e8af4 // indirect
 	github.com/DataDog/datadog-go v4.8.3+incompatible // indirect
 	github.com/DataDog/zstd v1.5.7 // indirect
@@ -287,9 +287,9 @@ replace (
 )
 
 replace (
-	github.com/0xUp5ide/upside-foundation/memiavl => ./memiavl
-	github.com/0xUp5ide/upside-foundation/store => ./store
-	github.com/0xUp5ide/upside-foundation/versiondb => ./versiondb
+	github.com/Upside-Foundation/upside/memiavl => ./memiavl
+	github.com/Upside-Foundation/upside/store => ./store
+	github.com/Upside-Foundation/upside/versiondb => ./versiondb
 )
 
 replace (

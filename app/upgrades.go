@@ -10,7 +10,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	upsidetypes "github.com/0xUp5ide/upside-foundation/x/upside/types"
+	upsidetypes "github.com/Upside-Foundation/upside/x/upside/types"
 )
 
 // UpgradeName must match the name in the governance proposal's

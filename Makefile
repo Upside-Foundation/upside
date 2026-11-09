@@ -166,7 +166,7 @@ release-dry-run:
 ###                                Sim Test                                 ###
 ###############################################################################
 
-SIMAPP = github.com/0xUp5ide/upside-foundation/app
+SIMAPP = github.com/Upside-Foundation/upside/app
 
 # Install the runsim binary with a temporary workaround of entering an outside
 # directory as the "go get" command ignores the -mod option and will polute the
@@ -296,7 +296,7 @@ endif
 ###                                Protobuf                                 ###
 ###############################################################################
 
-HTTPS_GIT := https://github.com/0xUp5ide/upside-foundation.git
+HTTPS_GIT := https://github.com/Upside-Foundation/upside.git
 protoVer=0.14.0
 protoImageName=ghcr.io/cosmos/proto-builder:$(protoVer)
 protoImageCi=$(DOCKER) run --rm -v $(CURDIR):/workspace --workdir /workspace --user root $(protoImageName)

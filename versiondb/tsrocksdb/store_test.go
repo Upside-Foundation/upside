@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/0xUp5ide/upside-foundation/versiondb"
+	"github.com/Upside-Foundation/upside/versiondb"
 	dbm "github.com/cosmos/cosmos-db"
 	"github.com/linxGnu/grocksdb"
 	"github.com/stretchr/testify/require"

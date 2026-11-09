@@ -1,99 +1,61 @@
-# Integration Test
+# Integration tests
 
-## Clone the upside repository
-```shell
-git clone https://github.com/0xUp5ide/upside-foundation.git
-```
+The Python integration suite starts development networks and exercises the daemon and contracts. Run it on a development machine with disposable state. Use separate homes and ports from any operational node.
 
-## Install [nix](https://nixos.org/download.html)
+## Prerequisites
 
-https://nixos.org/download.html
+The test runner uses Nix, Node.js, npm, Python, pytest, and the contract toolchain. The environment is defined in [integration_tests/shell.nix](../integration_tests/shell.nix), and the runner is [scripts/run-integration-tests](../scripts/run-integration-tests).
 
-Multi-user installation:
+The Nix build configuration is separate from the pinned Docker release recipe. A successful test build does not establish that its binary matches a release checksum.
 
-```shell
-sh <(curl -L https://nixos.org/nix/install) --daemon
-```
+## Run the suite
 
-Make sure the following line has been added to your shell profile (e.g. `~/.profile`):
+From the repository root:
 
-```shell
-source ~/.nix-profile/etc/profile.d/nix.sh
-```
-
-Then re-login shell, the nix installation is completed.
-
-## Install [cachix](https://github.com/cachix/cachix)
-
-```shell
-nix-env -iA cachix -f https://cachix.org/api/v1/install
-```
-
-## Configure Binary Caches
-
-Binary caches will save a lot of build times.
-
-```shell
-cachix use upside
-cachix use dapp  # it's necessary to use dapp's binary cache on new macos system.
-```
-
-## Run All Integration Tests
-```shell
+```bash
 make run-integration-tests
 ```
 
-## Customize The Test Runner
+The target runs three steps:
 
-To customize the test runner, you can also issue commands separately.
+1. `make gen-bindings-contracts` generates the contract bindings inside a Nix shell.
+2. [scripts/run-integration-tests](../scripts/run-integration-tests) runs `npm install` and `npm run typechain` in `integration_tests/contracts`. These npm commands run directly on your machine, outside Nix, and npm runs the install scripts of the packages it downloads.
+3. The same script runs pytest inside the Nix shell defined in [integration_tests/shell.nix](../integration_tests/shell.nix).
 
-### Enter `nix-shell`
+The default run currently fails. It includes `integration_tests/test_upgrade.py`, which builds `integration_tests/configs/upgrade-test-package.nix`. That file downloads earlier releases from a GitHub repository that doesn't exist, and the test walks upgrade plans that the app no longer registers. Run the tests that have no marker instead:
 
-It'll prepare all dependencies.
-
-```shell
-$ nix-shell integration_tests/shell.nix
-<nix-shell> $
+```bash
+TESTS_TO_RUN=unmarked make run-integration-tests
 ```
 
-### Compile Test Contracts
+To select other pytest markers:
 
-```shell
-$ cd integration_tests/contracts
-$ HUSKY_SKIP_INSTALL=1 npm install
-$ npm run typechain
-$ cd ../../
+```bash
+TESTS_TO_RUN=MARKER make run-integration-tests
 ```
 
-### Run `pytest`
+Replace `MARKER` with a marker used by the suite.
 
-We use `pytest` to discover the test cases and run them, follow [pytest doc](https://docs.pytest.org/en/6.2.x/contents.html) for more options.
+## Run selected tests
 
-You can invoke `pytest` after entering the nix shell:
+First prepare the contract bindings and test dependencies. The npm commands run on your machine, as described in [Run the suite](#run-the-suite):
 
-```shell
-$ cd integration_tests
-$ pytest -s -vv
+```bash
+make gen-bindings-contracts
+cd integration_tests/contracts
+npm install
+npm run typechain
+cd ../..
 ```
 
-You can use `-k` to select test cases by patterns in name:
+Then enter the environment:
 
-```shell
-$ cd integration_tests
-$ pytest -k test_basic
+```bash
+nix-shell integration_tests/shell.nix
+pytest --collect-only -q integration_tests
+pytest -s -vv integration_tests -k test_basic
 ```
 
-Some test cases will run on both `geth` and `upside`, you can also select the platform to run using `-k`:
+Use the collected names and markers to select the desired test cases. Some cases also start a geth instance.
 
-```shell
-$ cd integration_tests
-$ # run against upside only
-$ pytest -k upside
-$ # run against geth only
-$ pytest -k geth
-```
-
-### Print `test config`
-```shell
-$ jsonnet integration_tests/configs/default.jsonnet | yq -P 
-```
+For a manual daemon smoke test with fresh keys and a separate home, follow [Run a localnet](nodes/localnet.md).

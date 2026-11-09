@@ -1,0 +1,17 @@
+Upside Foundation: snapshot signing key statement
+
+Date: 2026-11-06
+Network: Upside mainnet, chain ID upside_61873-1
+
+The Upside Foundation publishes mainnet state snapshots at
+https://snapshots.mainnet.upside.net. Each snapshot's manifest.json is signed
+by the key below. A manifest signed by any other key is not from the
+foundation.
+
+Key: AWS KMS key, alias upside-snapshot-signing
+Key type: ECC NIST P-256, signature algorithm ECDSA with SHA-256
+Public key, DER SubjectPublicKeyInfo, SHA-256:
+5a1d63be19b149c65d0bd75e94b4a9e4d82c11601109dd2571fe2ca6417d1c87
+
+This statement holds until the foundation publishes a new signed statement
+that replaces it.

@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/0xUp5ide/upside-foundation/versiondb"
+	"github.com/Upside-Foundation/upside/versiondb"
 	"github.com/cosmos/iavl"
 	"github.com/linxGnu/grocksdb"
 

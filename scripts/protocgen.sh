@@ -16,8 +16,8 @@ done
 cd ..
 
 # move proto files to the right places
-cp -r github.com/0xUp5ide/upside-foundation/* ./
-cp -r github.com/0xUp5ide/upside-foundation/memiavl/* ./memiavl/
+cp -r github.com/Upside-Foundation/upside/* ./
+cp -r github.com/Upside-Foundation/upside/memiavl/* ./memiavl/
 rm -rf github.com
 
 # TODO uncomment go mod tidy after upgrading to ghcr.io/cosmos/proto-builder v0.12.0

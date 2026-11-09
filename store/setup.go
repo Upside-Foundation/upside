@@ -3,8 +3,8 @@ package store
 import (
 	"path/filepath"
 
-	"github.com/0xUp5ide/upside-foundation/memiavl"
-	"github.com/0xUp5ide/upside-foundation/store/rootmulti"
+	"github.com/Upside-Foundation/upside/memiavl"
+	"github.com/Upside-Foundation/upside/store/rootmulti"
 	"github.com/spf13/cast"
 
 	"cosmossdk.io/log"

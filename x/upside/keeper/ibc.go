@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	ibctransfertypes "github.com/cosmos/ibc-go/v10/modules/apps/transfer/types"
 	ibcclienttypes "github.com/cosmos/ibc-go/v10/modules/core/02-client/types"
 	channeltypes "github.com/cosmos/ibc-go/v10/modules/core/04-channel/types"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/hashicorp/go-metrics"
 

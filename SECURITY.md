@@ -12,11 +12,10 @@ confirm the problem faster.
 
 ## What to expect
 
-1. We confirm that we received the report within 5 business days.
-2. We investigate and validate the issue, usually within 10 business days.
+1. Maintainers acknowledge the report through the private reporting channel.
+2. Maintainers investigate the report and coordinate further information with the reporter.
 3. We develop and test a fix. Some issues take longer than others.
-4. Fixes to the chain software reach mainnet through a software upgrade that
-   validators and governance approve. We publish the fix and credit the
+4. Consensus changes require coordinated activation through governance and validator upgrades. We publish the fix and credit the
    reporter in the release notes, unless the reporter prefers to stay
    anonymous.
 

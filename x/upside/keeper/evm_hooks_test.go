@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"math/big"
 
-	upsidemodulekeeper "github.com/0xUp5ide/upside-foundation/x/upside/keeper"
-	handlers "github.com/0xUp5ide/upside-foundation/x/upside/keeper/evmhandlers"
-	keepertest "github.com/0xUp5ide/upside-foundation/x/upside/keeper/mock"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	upsidemodulekeeper "github.com/Upside-Foundation/upside/x/upside/keeper"
+	handlers "github.com/Upside-Foundation/upside/x/upside/keeper/evmhandlers"
+	keepertest "github.com/Upside-Foundation/upside/x/upside/keeper/mock"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 

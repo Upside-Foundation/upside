@@ -9,12 +9,12 @@ import (
 	"strings"
 	"testing"
 
+	upsidemoduletypes "github.com/Upside-Foundation/upside/x/upside/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 	dbm "github.com/cosmos/cosmos-db"
 	ibctransfertypes "github.com/cosmos/ibc-go/v10/modules/apps/transfer/types"
 	ibcexported "github.com/cosmos/ibc-go/v10/modules/core/exported"
-	upsidemoduletypes "github.com/0xUp5ide/upside-foundation/x/upside/types"
 	"github.com/evmos/ethermint/ante/cache"
 	evmante "github.com/evmos/ethermint/evmd/ante"
 	evmtypes "github.com/evmos/ethermint/x/evm/types"

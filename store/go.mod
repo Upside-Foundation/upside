@@ -1,4 +1,4 @@
-module github.com/0xUp5ide/upside-foundation/store
+module github.com/Upside-Foundation/upside/store
 
 go 1.23.0
 
@@ -8,7 +8,7 @@ require (
 	cosmossdk.io/errors v1.0.1
 	cosmossdk.io/log v1.3.1
 	cosmossdk.io/store v1.1.0
-	github.com/0xUp5ide/upside-foundation/memiavl v0.0.4
+	github.com/Upside-Foundation/upside/memiavl v0.0.4
 	github.com/cometbft/cometbft v0.38.17
 	github.com/cosmos/cosmos-db v1.0.2
 	github.com/cosmos/cosmos-sdk v0.50.4
@@ -170,4 +170,4 @@ replace (
 	github.com/cosmos/cosmos-sdk => github.com/crypto-org-chain/cosmos-sdk v0.50.6-0.20240722033504-50f1fa0c49d1
 )
 
-replace github.com/0xUp5ide/upside-foundation/memiavl => ../memiavl
+replace github.com/Upside-Foundation/upside/memiavl => ../memiavl

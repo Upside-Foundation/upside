@@ -5,12 +5,12 @@ import (
 	"math/big"
 	"strings"
 
+	upsideprecompiles "github.com/Upside-Foundation/upside/x/upside/keeper/precompiles"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	ibccallbacktypes "github.com/cosmos/ibc-go/v10/modules/apps/callbacks/types"
 	clienttypes "github.com/cosmos/ibc-go/v10/modules/core/02-client/types"
 	channeltypes "github.com/cosmos/ibc-go/v10/modules/core/04-channel/types"
 	ibcexported "github.com/cosmos/ibc-go/v10/modules/core/exported"
-	upsideprecompiles "github.com/0xUp5ide/upside-foundation/x/upside/keeper/precompiles"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
 	"github.com/ethereum/go-ethereum/common"
 
 	"cosmossdk.io/errors"

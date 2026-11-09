@@ -6,9 +6,9 @@ package cmd
 import (
 	"sort"
 
-	"github.com/0xUp5ide/upside-foundation/app"
-	"github.com/0xUp5ide/upside-foundation/cmd/upsided/opendb"
-	versiondbclient "github.com/0xUp5ide/upside-foundation/versiondb/client"
+	"github.com/Upside-Foundation/upside/app"
+	"github.com/Upside-Foundation/upside/cmd/upsided/opendb"
+	versiondbclient "github.com/Upside-Foundation/upside/versiondb/client"
 	"github.com/linxGnu/grocksdb"
 	"github.com/spf13/cobra"
 )

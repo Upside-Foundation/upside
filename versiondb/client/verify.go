@@ -11,7 +11,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/0xUp5ide/upside-foundation/memiavl"
+	"github.com/Upside-Foundation/upside/memiavl"
 	"github.com/alitto/pond"
 	"github.com/cosmos/gogoproto/jsonpb"
 	"github.com/cosmos/iavl"

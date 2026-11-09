@@ -9,7 +9,7 @@ The implementation is inspired by [testground](https://github.com/testground/tes
 
 >  Prerequisites: nix, for macOS also need [linux remote builder](https://nix.dev/manual/nix/2.22/advanced-topics/distributed-builds.html)
 
-You can test with the prebuilt images in [github registry](https://github.com/0xUp5ide/upside-foundation/pkgs/container/upside-testground), or build the image locally:
+You can test with the prebuilt images in [github registry](https://github.com/Upside-Foundation/upside/pkgs/container/upside-testground), or build the image locally:
 
 ```bash
 $ nix build .#testground-image

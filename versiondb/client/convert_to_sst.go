@@ -9,10 +9,10 @@ import (
 	"path/filepath"
 	"runtime"
 
+	"github.com/Upside-Foundation/upside/versiondb/extsort"
+	"github.com/Upside-Foundation/upside/versiondb/tsrocksdb"
 	"github.com/alitto/pond"
 	"github.com/cosmos/iavl"
-	"github.com/0xUp5ide/upside-foundation/versiondb/extsort"
-	"github.com/0xUp5ide/upside-foundation/versiondb/tsrocksdb"
 	"github.com/linxGnu/grocksdb"
 	"github.com/spf13/cobra"
 )

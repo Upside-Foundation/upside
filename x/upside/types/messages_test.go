@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"filippo.io/age"
-	cmdcfg "github.com/0xUp5ide/upside-foundation/cmd/upsided/config"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	cmdcfg "github.com/Upside-Foundation/upside/cmd/upsided/config"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	"github.com/stretchr/testify/require"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"

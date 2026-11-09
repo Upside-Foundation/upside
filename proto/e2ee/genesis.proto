@@ -3,7 +3,7 @@ package e2ee;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/0xUp5ide/upside-foundation/x/e2ee/types";
+option go_package = "github.com/Upside-Foundation/upside/x/e2ee/types";
 
 // EncryptionKeyEntry is a type that contains the owner and the public key.
 message EncryptionKeyEntry {

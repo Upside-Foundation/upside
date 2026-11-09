@@ -3,7 +3,7 @@ package upside;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/0xUp5ide/upside-foundation/x/upside/types";
+option go_package = "github.com/Upside-Foundation/upside/x/upside/types";
 
 // Params defines the parameters for the upside module.
 message Params {

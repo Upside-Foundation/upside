@@ -8,11 +8,11 @@ The `x/upside` module keeps the following objects in state:
 
 |                         | Key                                    | Value                      |
 | ----------------------- | -------------------------------------- | -------------------------- |
-| DenomToExternalContract | `[]byte{1} + []byte(denom)`            | `[]byte(contract_address)` |
-| DenomToAutoContract     | `[]byte{2} + []byte(denom)`            | `[]byte(contract_address)` |
-| ContractToDenom         | `[]byte{3} + []byte(contract_address)` | `[]byte(denom)`            |
+| DenomToExternalContract | `[]byte{1} + []byte(denom)`            | 20-byte contract address   |
+| DenomToAutoContract     | `[]byte{2} + []byte(denom)`            | 20-byte contract address   |
+| ContractToDenom         | `[]byte{3} + 20-byte contract address` | `[]byte(denom)`            |
 | Params                  | `[]byte{4}`                            | `ProtocolBuffer(Params)`   |
-| AdminToPermissions      | `[]byte{5} + address bytes`            | permission bit flags       |
+| AdminToPermissions      | `[]byte{5} + address bytes`            | permission bit flags, big-endian `uint64` |
 | BlockList               | `[]byte{6}`                            | block list blob            |
 
 - `DenomToExternalContract` maps a denom to an external CRC20 contract.

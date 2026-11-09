@@ -8,7 +8,7 @@ import "ethermint/evm/v1/tx.proto";
 import "upside/upside.proto";
 // this line is used by starport scaffolding # 1
 
-option go_package = "github.com/0xUp5ide/upside-foundation/x/upside/types";
+option go_package = "github.com/Upside-Foundation/upside/x/upside/types";
 
 // Query defines the gRPC querier service.
 service Query {

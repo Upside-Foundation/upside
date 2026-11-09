@@ -1,11 +1,11 @@
 package events
 
 import (
+	ica "github.com/Upside-Foundation/upside/x/upside/events/bindings/cosmos/precompile/ica"
+	relayer "github.com/Upside-Foundation/upside/x/upside/events/bindings/cosmos/precompile/relayer"
+	upsideeventstypes "github.com/Upside-Foundation/upside/x/upside/events/types"
 	transfertypes "github.com/cosmos/ibc-go/v10/modules/apps/transfer/types"
 	channeltypes "github.com/cosmos/ibc-go/v10/modules/core/04-channel/types"
-	ica "github.com/0xUp5ide/upside-foundation/x/upside/events/bindings/cosmos/precompile/ica"
-	relayer "github.com/0xUp5ide/upside-foundation/x/upside/events/bindings/cosmos/precompile/relayer"
-	upsideeventstypes "github.com/0xUp5ide/upside-foundation/x/upside/events/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 

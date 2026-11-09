@@ -3,7 +3,7 @@ package keeper
 import (
 	"context"
 
-	"github.com/0xUp5ide/upside-foundation/x/e2ee/types"
+	"github.com/Upside-Foundation/upside/x/e2ee/types"
 
 	"cosmossdk.io/core/address"
 	"cosmossdk.io/store/prefix"

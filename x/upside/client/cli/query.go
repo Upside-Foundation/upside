@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 	rpctypes "github.com/evmos/ethermint/rpc/types"
 	"github.com/spf13/cobra"
 

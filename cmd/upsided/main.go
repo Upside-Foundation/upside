@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/0xUp5ide/upside-foundation/app"
-	"github.com/0xUp5ide/upside-foundation/cmd/upsided/cmd"
+	"github.com/Upside-Foundation/upside/app"
+	"github.com/Upside-Foundation/upside/cmd/upsided/cmd"
 
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
 )

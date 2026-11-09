@@ -31,7 +31,7 @@ import (
 	simtestutil "github.com/cosmos/cosmos-sdk/testutil/sims"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	upsidetypes "github.com/0xUp5ide/upside-foundation/x/upside/types"
+	upsidetypes "github.com/Upside-Foundation/upside/x/upside/types"
 )
 
 var setConfigOnce sync.Once

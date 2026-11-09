@@ -4,7 +4,7 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 
 	"cosmossdk.io/errors"
 

@@ -1,8 +1,8 @@
 package v2
 
 import (
-	"github.com/0xUp5ide/upside-foundation/x/upside/exported"
-	"github.com/0xUp5ide/upside-foundation/x/upside/types"
+	"github.com/Upside-Foundation/upside/x/upside/exported"
+	"github.com/Upside-Foundation/upside/x/upside/types"
 
 	storetypes "cosmossdk.io/store/types"
 

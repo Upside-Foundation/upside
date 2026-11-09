@@ -4,7 +4,7 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/0xUp5ide/upside-foundation/x/upside/events/bindings/cosmos/precompile/bank"
+	"github.com/Upside-Foundation/upside/x/upside/events/bindings/cosmos/precompile/bank"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/vm"

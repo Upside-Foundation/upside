@@ -7,10 +7,10 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/Upside-Foundation/upside/memiavl"
+	"github.com/Upside-Foundation/upside/store/cachemulti"
+	"github.com/Upside-Foundation/upside/store/memiavlstore"
 	dbm "github.com/cosmos/cosmos-db"
-	"github.com/0xUp5ide/upside-foundation/memiavl"
-	"github.com/0xUp5ide/upside-foundation/store/cachemulti"
-	"github.com/0xUp5ide/upside-foundation/store/memiavlstore"
 
 	"cosmossdk.io/errors"
 	"cosmossdk.io/log"

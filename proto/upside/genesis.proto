@@ -6,7 +6,7 @@ import "upside/upside.proto";
 
 // this line is used by starport scaffolding # genesis/proto/import
 
-option go_package = "github.com/0xUp5ide/upside-foundation/x/upside/types";
+option go_package = "github.com/Upside-Foundation/upside/x/upside/types";
 
 // GenesisState defines the upside module's genesis state.
 message GenesisState {
